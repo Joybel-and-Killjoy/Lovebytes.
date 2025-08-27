@@ -1,0 +1,275 @@
+body {
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(to bottom, rgb(233, 233, 249), rgb(207, 154, 216) );
+    font-family: "Libertinus Serif", sans-serif;
+}
+
+.status-banner {
+  width: 100%;
+  overflow: hidden;
+  background-color: lavenderblush;
+  white-space: nowrap;
+  box-sizing: border-box;
+}
+
+.status-track {
+  display: inline-block;
+  padding-left: 100%; /* Pushes it off the right edge initially */
+  animation: statusbanner 20s linear infinite;
+  white-space: nowrap;
+}
+
+.status-msg {
+  display: inline-block;
+  padding-right: 100px; /* adds spacing between the two */
+  font-weight: bold;
+
+}
+
+header {
+    display: flex;
+    background-image: url("banner-img.gif");
+    background-position: center center;
+    background-color: rgba(208, 191, 235, 0.6);
+    background-blend-mode: multiply;
+    background-size: cover;
+    flex-direction: column;
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+nav {
+    display: flex;
+    width: 30%;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+main {
+    display: flex;
+    width: 100%;
+}
+#name {
+    animation: float 4s ease-in-out infinite;
+}
+
+.profile-basics, .highlights-music {
+    flex: 1;
+    box-sizing: border-box; /*keep box within 50%*/
+    padding: 20px;
+    height: 500px;
+}
+
+.profile-basics {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    align-items: flex-end;
+    padding-right: 0;
+}
+
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 60%;
+    background-color: lavenderblush;
+    border-radius: 20px;
+    box-shadow: 0px 0px 20px rgb(226, 162, 255);
+}
+
+.main-pic {
+    border-radius: 50%;
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    box-shadow: 0px 0px 20px rgb(226, 162, 255);
+}
+
+h3 {
+    margin: 0;
+}
+
+h4 {
+    margin: 0; 
+}
+
+.bio {
+    display: flex;
+    width: 70%;
+    text-align: center;
+}
+
+.highlights-music {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.highlights {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 350px;
+    margin: 15px 0px;
+    width: 100%;
+    height: 50%;
+    border-radius: 20px;
+    background-color: lavenderblush;
+    box-shadow: 0px 0px 20px rgb(226, 162, 255);
+}
+
+.music-display {
+    padding-bottom: 10px;
+}
+
+p {
+    margin: 0;
+    padding: 3px 13px;
+}
+
+@keyframes float {
+    0%, 100% {transform: translateY(-8px);}
+    50% {transform: translateY(-15px);}
+}
+
+@keyframes statusbanner {
+    0% {transform: translateX(0%);}
+    100% {transform: translateX(-100%);}
+}
+
+/*GACHA SYSTEM*/
+.gacha {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Press Start 2P";
+    background-color: lavenderblush;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 20px rgb(226, 162, 255);
+}
+
+.gacha-btn {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    border: none;
+    font-family: inherit;
+    box-shadow: 0px 2px 10px pink;
+    font-size: 1rem;
+    background-color: rgb(253, 224, 229);
+    margin: 20px;
+}
+
+.gachafact {
+    margin-top: 20px;
+    margin-bottom: 50px;
+    font-size: 10px;
+}
+
+.gacha-exp {
+    font-size: 10px;
+}
+
+.gachafact {
+    font-size: 15px;
+}
+
+ /*GACHA BUTTON*/
+
+.gacha-btn:hover {
+  background-color: pink;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+}
+/*GACHA BUTTON*/
+
+/*GACHA SYSTEM*/
+
+
+/*GACHA SLIDER*/
+.switch {
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+    width: 49.6px;
+    height: 20px;
+    border: 3px solid darkgrey;
+    border-radius: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #c3ecff;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 15px;
+    width: 15px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked + .slider {
+    background-color: #f81111;
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+/*GACHA SLIDER*/
+
+footer {
+    display: flex;
+    justify-content: center;
+    padding: 10px;
+    width: 100%;
+    background-color: white;
+}
