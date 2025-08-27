@@ -26,4 +26,8 @@ Personality data visualizations
 More customization options for each profile
 Full mobile responsiveness
 
+Preview of **static** site:
+https://joybel-and-killjoy.github.io/Lovebytes./
+
 ✨ Made with love by Joybel ( •̀ ω •́ )✧
+
