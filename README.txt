@@ -26,9 +26,4 @@ Personality data visualizations
 More customization options for each profile
 Full mobile responsiveness
 
-
-## Preview
-![Gif of Lovebytes](./assets/screenrecording.gif)
-
-
 ✨ Made with love by Joybel ( •̀ ω •́ )✧
